@@ -10,19 +10,7 @@ for url in df_hold.url[:3]:
     print(url)
     r = requests.get(url)
     match = re.search("(?:window\.location\.replace\('|URL=\')(?P<url>https?://[^'\']+)", r.text)
-    # print("This")
-    # print(match.group(1))
     r2 = requests.get(match.group(1))
-    # print(r2.content)
-    
-    
-    # decoded_string = r.content.decode('utf-8')
-    # # Use regular expression to extract the URL
-    # #match = re.search(r"URL='([^']*)'", decoded_string)
-    # match = re.search(r"URL='(.*?)'", decoded_string)
-
-    # print("\n")
-    # print(match)
     soup = BeautifulSoup(r2.content, "html.parser")
     
     #print(soup.text)
@@ -113,4 +101,3 @@ for url in df_hold.url[:3]:
 
         df.to_csv(filename, index=False)
 
-# urls.close()
