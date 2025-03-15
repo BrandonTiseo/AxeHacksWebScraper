@@ -3,9 +3,6 @@ import csv
 from bs4 import BeautifulSoup
 import requests
 
-
-
-
 url = "https://www.allrecipes.com/recipe/17981/one-bowl-chocolate-cake-iii/"
 r = requests.get(url)
 soup = BeautifulSoup(r.content, "html.parser")
