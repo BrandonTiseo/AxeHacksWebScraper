@@ -1,3 +1,1 @@
-Steps:
-Hit run
-Terminal: streamlit run frontend.py
+To run streamlit: streamlit run frontend.py

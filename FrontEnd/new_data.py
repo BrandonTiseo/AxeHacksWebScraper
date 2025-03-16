@@ -2,7 +2,7 @@ import pandas as pd
 
 def get_recipes():
     try:
-        df = pd.read_csv('recipe_infos.csv')
+        df = pd.read_csv('../CSVFiles/recipe_infos.csv')
         recipes = [tuple(row) for index, row in df.iterrows()] #convert the dataframe to a list of tuples.
         return recipes
     except FileNotFoundError:
