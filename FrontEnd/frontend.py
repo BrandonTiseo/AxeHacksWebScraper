@@ -9,7 +9,7 @@ recipes = get_recipes()
 
 # Title of app
 st.title("Spatula")
-st.subheader("a recipe scraper")
+st.subheader("A Recipe Scraper")
 
 # Dropdown for choosing recipes
 st.header("Choose recipe")
